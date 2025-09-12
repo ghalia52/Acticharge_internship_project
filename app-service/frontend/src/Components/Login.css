@@ -1,0 +1,495 @@
+/* ===========================
+   Login Component Styles
+   =========================== */
+
+/* CSS Reset & Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+/* Main Container */
+.login-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #f9fafb, #f3f4f6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.login-wrapper {
+  width: 100%;
+  max-width: 28rem;
+}
+
+/*header*/
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-header__brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.logo{
+  height: 3rem;
+  width: 3rem;
+}
+
+.login-header__text {
+  text-align: left;
+}
+
+.login-header__title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #111827;
+  margin: 0 0 0.25rem 0;
+  line-height: 1.2;
+}
+
+.login-header__subtitle {
+  color: #6b7280;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+/* ===========================
+   Form Container
+   =========================== */
+.form-container {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 2rem;
+  border: 1px solid #e5e7eb;
+}
+
+.form-content {
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+}
+
+/* ===========================
+   Alert Messages
+   =========================== */
+.alert {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid;
+  font-size: 0.875rem;
+}
+
+.alert--error {
+  background-color: #fef2f2;
+  border-color: #fecaca;
+  color: #dc2626;
+}
+
+.alert--success {
+  background-color: #f0fdf4;
+  border-color: #bbf7d0;
+  color: #059669;
+}
+
+.alert__icon {
+  flex-shrink: 0;
+}
+
+.alert__text {
+  line-height: 1.4;
+}
+
+/* ===========================
+   Form Fields
+   =========================== */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-field__label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  line-height: 1.4;
+}
+
+.form-field__input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  background-color: #f9fafb;
+  transition: all 0.2s ease-in-out;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.form-field__input:focus {
+  outline: none;
+  border-color: #10b981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+  background-color: white;
+}
+
+.form-field__input--error {
+  border-color: #fca5a5;
+  background-color: #fef2f2;
+}
+
+.form-field__input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #f3f4f6;
+}
+
+.form-field__input::placeholder {
+  color: #9ca3af;
+}
+
+/* ===========================
+   Password Field
+   =========================== */
+.password-field {
+  position: relative;
+}
+
+.password-field__input {
+  padding-right: 3rem;
+}
+
+.password-field__toggle {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.password-field__toggle:hover:not(:disabled) {
+  color: #6b7280;
+}
+
+.password-field__toggle:focus {
+  outline: none;
+  color: #6b7280;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+}
+
+.password-field__toggle:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* ===========================
+   Field Error Messages
+   =========================== */
+.form-field__error {
+  font-size: 0.875rem;
+  color: #dc2626;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  line-height: 1.4;
+}
+
+.form-field__error-icon {
+  flex-shrink: 0;
+}
+
+/* ===========================
+   Form Row (Remember Me & Forgot Password)
+   =========================== */
+.form-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* ===========================
+   Checkbox
+   =========================== */
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.checkbox__input {
+  width: 1rem;
+  height: 1rem;
+  accent-color: #10b981;
+  cursor: pointer;
+}
+
+.checkbox__input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+}
+
+.checkbox__input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.checkbox__label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  cursor: pointer;
+  line-height: 1.4;
+  user-select: none;
+}
+
+/* ===========================
+   Forgot Password Link
+   =========================== */
+.forgot-password {
+  font-size: 0.875rem;
+  color: #059669;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+  text-decoration: none;
+  padding: 0;
+}
+
+.forgot-password:hover:not(:disabled) {
+  color: #047857;
+  text-decoration: underline;
+}
+
+.forgot-password:focus {
+  outline: none;
+  color: #047857;
+  text-decoration: underline;
+}
+
+.forgot-password:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ===========================
+   Submit Button
+   =========================== */
+.submit-button {
+  width: 100%;
+  background-color: #10b981;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #059669;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+.submit-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.5);
+}
+
+.submit-button--loading,
+.submit-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ===========================
+   Loading Spinner
+   =========================== */
+.loading-spinner {
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===========================
+   Footer
+   =========================== */
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.footer__text {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.footer__signup-button {
+  color: #059669;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.footer__signup-button:hover:not(:disabled) {
+  color: #047857;
+}
+
+.footer__signup-button:focus {
+  outline: none;
+  color: #047857;
+}
+
+.footer__signup-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ===========================
+   Responsive Design
+   =========================== */
+@media (max-width: 640px) {
+  .login-container {
+    padding: 0.5rem;
+  }
+  
+  .form-container {
+    padding: 1.5rem;
+  }
+  
+  .login-header__title {
+    font-size: 1.5rem;
+  }
+  
+  .login-header__brand {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .login-header__text {
+    text-align: center;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .forgot-password {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-header__brand {
+    gap: 0.75rem;
+  }
+  
+  .login-header__logo-container {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  
+  .form-container {
+    padding: 1.25rem;
+  }
+  
+  .form-content {
+    gap: 1.25rem;
+  }
+}
+
+/* ===========================
+   High Contrast & Accessibility
+   =========================== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .form-field__input {
+    border-color: #000;
+  }
+  
+  .form-field__input:focus {
+    border-color: #000;
+    box-shadow: 0 0 0 2px #000;
+  }
+  
+  .submit-button {
+    border: 2px solid #000;
+  }
+}
+
+/* ===========================
+   Print Styles
+   =========================== */
+@media print {
+  .login-container {
+    background: white;
+    box-shadow: none;
+  }
+  
+  .form-container {
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+  
+  .submit-button,
+  .footer__signup-button,
+  .forgot-password {
+    display: none;
+  }
+}

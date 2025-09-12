@@ -1,0 +1,33 @@
+{
+  "bindings": [
+    {
+      "type": "eventHubTrigger",
+      "name": "events",
+      "direction": "in",
+      "eventHubName": "iothub-ehub-vehicle-io-55479495-2b76324a19",
+      "connection": "vehicle_iothub_events_IOTHUB",
+      "cardinality": "many",
+      "consumerGroup": "$Default"
+    },
+    {
+      "name": "outputDocument",
+      "direction": "out",
+      "type": "cosmosDB",
+      "databaseName": "iot_data",
+      "containerName": "vehicle_data",
+      "collectionName": "vehicle_data",
+      "connectionStringSetting": "CosmosDB",
+      "createIfNotExists": false
+    },
+    {
+      "name": "outputdoc",
+      "direction": "out", 
+      "type": "cosmosDB",
+      "databaseName": "iot_data",
+      "containerName": "vehicle_predictions",
+      "collectionName": "vehicle_predictions",
+      "connectionStringSetting": "CosmosDB",
+      "createIfNotExists": false
+    }
+  ]
+}
