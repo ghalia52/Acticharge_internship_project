@@ -23,7 +23,7 @@ With the rapid adoption of electric vehicles, managing and predicting energy con
 2. **Machine Learning**
 
    * Built and trained in **Azure ML**.
-   * Model: **Random Forest** for energy prediction.
+   * Model: **Gradient Boosting** for energy prediction.
    * Performance: RMSE = **0.337**, Test R² = **0.997**.
 
 3. **Results & Dashboard**
