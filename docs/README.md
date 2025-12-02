@@ -23,9 +23,11 @@ With the rapid adoption of electric vehicles, managing and predicting energy con
 
 3. **Results & Dashboard**  
    - **Azure App Service** hosts a **Node.js backend** and **React frontend**.  
-   - Provides a user-friendly dashboard for predictions and analytics.  
+   - Provides a user-friendly dashboard for predictions and analytics.
+    <img width="1446" height="698" alt="image" src="https://github.com/user-attachments/assets/a07c20d3-a0c5-4c32-a03a-9cf09e215d51" />
 
----
+
+   ---
 
 ## 📂 Repository Structure
 ```
